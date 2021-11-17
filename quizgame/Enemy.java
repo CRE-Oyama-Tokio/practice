@@ -1,25 +1,29 @@
 package quizgame;
 
-public class Enemy {
-
-	private int ehp;
-	private int eap;
+public abstract class Enemy extends CharaStatus{
 
 
-	public int getEhp() {
-		return ehp;
+	private String name;
+	private int ansNum;
+
+
+	public int getAnsNum() {
+		return ansNum;
 	}
 
-	public void setEhp(int ehp) {
-		this.ehp = ehp;
+	public void setAnsNum(int ansNum) {
+		this.ansNum = ansNum;
 	}
 
-	public int getEap() {
-		return eap;
+	public String getName() {
+		return name;
 	}
 
-	public void setEap(int eap) {
-		this.eap = eap;
+	public void setName(String name) {
+		this.name = name;
 	}
+
+	public abstract int quiz(int cnt);
+
 
 }

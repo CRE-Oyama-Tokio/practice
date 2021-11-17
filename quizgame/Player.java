@@ -2,26 +2,16 @@ package quizgame;
 
 import java.util.Scanner;
 
-public class Player {
+public class Player extends CharaStatus {
 
-	private int php;
-	private int pap;
+	//private int hp;
+	//private int ap;
 	private int choice;
 
-	public int getPhp() {
-		return php;
-	}
 
-	public void setPhp(int php) {
-		this.php = php;
-	}
-
-	public int getPap() {
-		return pap;
-	}
-
-	public void setPap(int pap) {
-		this.pap = pap;
+	public Player (int hp, int ap) {
+		setHp(hp);
+		setAp(ap);
 	}
 
 	public int getChoice() {
@@ -32,6 +22,8 @@ public class Player {
 		this.choice = choice;
 	}
 
+
+	//答えを入力するメソッド
 	void answer() {
 		//答えを入力
 		Scanner scan = new Scanner(System.in);
